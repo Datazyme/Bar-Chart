@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bar Chart with jQuery</title>
+    <style>
+      /* CSS styles for the bar chart */
+      .chart {
+        width: 400px;
+        margin: 20px auto;
+      }
+
+      .bar {
+        display: inline-block;
+        width: 40px;
+        background-color: blue;
+        margin-right: 10px;
+        text-align: center;
+      }
+
+      .bar-label {
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chart" id="chart-container">
+      <!-- Bars will be added here using jQuery -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Sample data for the chart
+        const data = [10, 25, 15, 30, 20];
+
+        // Reference to the chart container
+        const chartContainer = $("#chart-container");
+
+        // Loop through the data and create bars
+        for (let i = 0; i < data.length; i++) {
+          const barHeight = data[i] * 5; // You can adjust this scale factor for better visualization
+          const bar = $('<div class="bar"></div>');
+          bar.css("height", barHeight + "px");
+          bar.append('<div class="bar-label">' + data[i] + "</div>");
+          chartContainer.append(bar);
+        }
+      });
+    </script>
+  </body>
+</html>

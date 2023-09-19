@@ -2,8 +2,24 @@
   "name": "stretch-project-1",
   "version": "0.0.0",
   "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "local": "./node_modules/.bin/nodemon -L --ignore public/"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "pg": "^8.5.0",
+    "sass": "^1.35.1"
+  },
   "devDependencies": {
     "eslint": "^3.19.0",
-    "eslint-config-lighthouselabs": "lighthouse-labs/eslint-config-lighthouselabs"
+    "eslint-config-lighthouselabs": "lighthouse-labs/eslint-config-lighthouselabs",
+    "nodemon": "^2.0.10"
   }
 }
